@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Nav from "./Nav";
-import Logo from "./images/Logo.svg";
-import Container from "./Container";
+import Nav from "../Nav/Nav";
+import Logo from "../../images/Logo.svg";
+import Container from "../../Container";
 import { CgMenu, CgClose } from "react-icons/cg";
 import "./Header.css";
 

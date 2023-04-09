@@ -1,6 +1,6 @@
 import React from "react";
 import "./Nav.css";
-import NavItem from "./NavItem";
+import NavItem from "../NavItem/NavItem";
 
 const Nav = ({ className }) => {
   return (
