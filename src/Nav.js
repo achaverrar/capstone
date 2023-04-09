@@ -1,27 +1,17 @@
 import React from "react";
+import "./Nav.css";
+import NavItem from "./NavItem";
 
-const Nav = () => {
+const Nav = ({ className }) => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#menu">Menu</a>
-        </li>
-        <li>
-          <a href="#reservations">Reservations</a>
-        </li>
-        <li>
-          <a href="#order-online">Order Online</a>
-        </li>
-        <li>
-          <a href="#login">Login</a>
-        </li>
+    <nav className={className}>
+      <ul className="header__navbar-links">
+        <NavItem link="/" content="Home" />
+        <NavItem link="#about" content="About" />
+        <NavItem link="#menu" content="Menu" />
+        <NavItem link="#reservations" content="Reservations" />
+        <NavItem link="#order-online" content="Order Online" />
+        <NavItem link="#login" content="Login" />
       </ul>
     </nav>
   );
