@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "./images/photos/restaurant_food.jpg";
+import { restaurantFood } from "./constants/images";
 import "./Hero.css";
 
 const Hero = () => {
@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="hero__image-container">
         <img
           className="hero__image"
-          src={HeroImage}
+          src={restaurantFood}
           alt="Waiter showing restaurant food"
         />
       </div>
