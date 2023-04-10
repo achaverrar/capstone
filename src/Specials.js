@@ -7,7 +7,7 @@ import "./Specials.css";
 const Specials = () => {
   return (
     <section className="specials">
-      <Container>
+      <Container className="container--specials">
         <div className="specials__heading">
           <h2 className="specials__title font-display-title">
             This week's specials!
