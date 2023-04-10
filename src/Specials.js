@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "./Container";
 import Card from "./Card";
-import specialsData from "./constants/data";
+import { specialsData } from "./constants/data";
 import "./Specials.css";
 
 const Specials = () => {

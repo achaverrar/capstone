@@ -1,5 +1,13 @@
 import { v4 as uuidv4 } from "uuid";
-import { greekSalad, bruschetta, lemonDessert } from "./images";
+import {
+  greekSalad,
+  bruschetta,
+  lemonDessert,
+  sarah,
+  ajay,
+  katherine,
+  derek,
+} from "./images";
 
 const specialsData = [
   {
@@ -28,4 +36,41 @@ const specialsData = [
   },
 ];
 
-export default specialsData;
+const testimonialsData = [
+  {
+    id: uuidv4(),
+    image: sarah,
+    name: "Sara López",
+    date: new Date(2023, 2, 25), //2 weeks ago
+    rating: 5,
+    description:
+      "Seriously cannot stop thinking about the Turkish Mac n' Cheese!!",
+  },
+  {
+    id: uuidv4(),
+    image: ajay,
+    name: "Ajay Kanojia",
+    date: new Date(2023, 2, 9), //1 month ago
+    rating: 5,
+    description:
+      "Seriously cannot stop thinking about the Turkish Mac n' Cheese!!",
+  },
+  {
+    id: uuidv4(),
+    image: katherine,
+    name: "Katherine Oh",
+    date: new Date(2023, 1, 3), //2 months ago
+    rating: 5,
+    description: "Best Feta Salad in town. Flawless everytime!",
+  },
+  {
+    id: uuidv4(),
+    image: derek,
+    name: "Derek Conway",
+    date: new Date(2023, 0, 31), //2 months ago
+    rating: 5,
+    description: "Such a chilled out atmosphere - love it!",
+  },
+];
+
+export { specialsData, testimonialsData };
