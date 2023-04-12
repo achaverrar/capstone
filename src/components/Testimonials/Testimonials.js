@@ -1,7 +1,7 @@
 import React from "react";
-import Container from "./Container";
-import Review from "./Review";
-import { testimonialsData } from "./constants/data";
+import Container from "../../Container";
+import Review from "../Review/Review";
+import { testimonialsData } from "../../constants/data";
 
 import "./Testimonials.css";
 

@@ -1,7 +1,7 @@
 import React from "react";
-import dateFormatter from "./constants/dateFormatter";
+import dateFormatter from "../../constants/dateFormatter";
 import "./Review.css";
-import Stars from "./Stars";
+import Stars from "../Stars/Stars";
 
 const Review = ({ data }) => {
   const { id, image, name, date, rating, comment } = data;

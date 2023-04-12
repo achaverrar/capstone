@@ -1,5 +1,5 @@
 import React from "react";
-import { restaurantFood } from "./constants/images";
+import { restaurantFood } from "../../constants/images";
 import "./Hero.css";
 
 const Hero = () => {

@@ -1,6 +1,6 @@
 import React from "react";
-import Container from "./Container";
-import { marioAdrian2, restaurant } from "./constants/images";
+import Container from "../../Container";
+import { marioAdrian2, restaurant } from "../../constants/images";
 import "./AboutUs.css";
 
 const AboutUs = () => {

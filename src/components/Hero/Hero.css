@@ -18,7 +18,7 @@
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.9)
     ),
-    url(./images/photos/restaurant_food.jpg);
+    url(../../images/photos/restaurant_food.jpg);
   background-size: cover;
   background-position: 50% 60%;
 }
