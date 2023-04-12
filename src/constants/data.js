@@ -43,8 +43,7 @@ const testimonialsData = [
     name: "Sara López",
     date: new Date(2023, 2, 25), //2 weeks ago
     rating: 5,
-    description:
-      "Seriously cannot stop thinking about the Turkish Mac n' Cheese!!",
+    comment: "Seriously cannot stop thinking about the Turkish Mac n' Cheese!!",
   },
   {
     id: uuidv4(),
@@ -52,8 +51,7 @@ const testimonialsData = [
     name: "Ajay Kanojia",
     date: new Date(2023, 2, 9), //1 month ago
     rating: 5,
-    description:
-      "Seriously cannot stop thinking about the Turkish Mac n' Cheese!!",
+    comment: "We had such a great time celebrating my wife’s birthday!",
   },
   {
     id: uuidv4(),
@@ -61,15 +59,15 @@ const testimonialsData = [
     name: "Katherine Oh",
     date: new Date(2023, 1, 3), //2 months ago
     rating: 5,
-    description: "Best Feta Salad in town. Flawless everytime!",
+    comment: "Best Feta Salad in town. Flawless everytime!",
   },
   {
     id: uuidv4(),
     image: derek,
     name: "Derek Conway",
     date: new Date(2023, 0, 31), //2 months ago
-    rating: 5,
-    description: "Such a chilled out atmosphere - love it!",
+    rating: 4.5,
+    comment: "Such a chilled out atmosphere - love it!",
   },
 ];
 
