@@ -71,4 +71,77 @@ const testimonialsData = [
   },
 ];
 
-export { specialsData, testimonialsData };
+const footerData = [
+  {
+    id: uuidv4(),
+    title: "Doormat Navigation",
+    links: [
+      {
+        text: "Home",
+        href: "/",
+      },
+      {
+        text: "About Us",
+        href: "#about-us",
+      },
+      {
+        text: "Menu",
+        href: "#specials",
+      },
+      {
+        text: "Reservations",
+        href: "#hero",
+      },
+      {
+        text: "Order Online",
+        href: "#specials",
+      },
+      {
+        text: "Login",
+        href: "#",
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    title: "Contact",
+    links: [
+      {
+        text: "2263 John Calvin Drive",
+        href: "",
+      },
+      {
+        text: "708-930-8580",
+        href: "tel:+17089308580",
+      },
+      {
+        text: "hello@littlelemon.com",
+        href: "mailto:hello@littlelemon.com",
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    title: "Social Media Links",
+    links: [
+      {
+        text: "Facebook",
+        href: "https://facebook.com/",
+      },
+      {
+        text: "Instagram",
+        href: "https://www.instagram.com",
+      },
+      {
+        text: "YouTube",
+        href: "https://www.youtube.com",
+      },
+      {
+        text: "Twitter",
+        href: "https://www.twitter.com",
+      },
+    ],
+  },
+];
+
+export { specialsData, testimonialsData, footerData };
