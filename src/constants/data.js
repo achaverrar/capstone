@@ -144,4 +144,42 @@ const footerData = [
   },
 ];
 
+const inputs = [
+  {
+    key: uuidv4(),
+    id: "date",
+    type: "date",
+    placeholder: "",
+    errorMessage: "",
+    pattern: "",
+    label: "Choose date",
+    required: true,
+  },
+  {
+    key: uuidv4(),
+    id: "time",
+    type: "select",
+    placeholder: "",
+    label: "Choose time",
+    options: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"],
+  },
+  {
+    key: uuidv4(),
+    id: "guests",
+    type: "number",
+    placeholder: "1",
+    min: "1",
+    max: "10",
+    label: "Number of guests",
+  },
+  {
+    key: uuidv4(),
+    id: "occasion",
+    type: "select",
+    placeholder: "",
+    label: "Occasion",
+    options: ["Birthday", "Anniversary"],
+  },
+];
+
 export { specialsData, testimonialsData, footerData };

@@ -1,16 +1,31 @@
-import React from "react";
-import Hero from "../Hero/Hero";
-import Specials from "../Specials/Specials";
-import Testimonials from "../Testimonials/Testimonials";
-import AboutUs from "../AboutUs/AboutUs";
+import React, { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "../../pages/HomePage";
+import BookingPage from "../../pages/BookingPage";
 
-const Main = () => {
+const Main = (props) => {
+  const [availableTimes, setAvailableTimes] = useState([
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00",
+  ]);
   return (
     <main>
-      <Hero></Hero>
-      <Specials></Specials>
-      <Testimonials></Testimonials>
-      <AboutUs></AboutUs>
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route
+          path="/reservations"
+          element={
+            <BookingPage
+              times={availableTimes}
+              changeTimes={setAvailableTimes}
+            />
+          }
+        />
+      </Routes>
     </main>
   );
 };

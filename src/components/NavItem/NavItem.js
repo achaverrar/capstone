@@ -1,12 +1,13 @@
 import React from "react";
 import "./NavItem.css";
+import { Link } from "react-router-dom";
 
 const NavItem = ({ link, content }) => {
   return (
     <li className="font-card-title">
-      <a href={link} className="header__navbar-link">
+      <Link to={link} className="header__navbar-link">
         {content}
-      </a>
+      </Link>
     </li>
   );
 };

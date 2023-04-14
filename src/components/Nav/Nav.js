@@ -9,7 +9,7 @@ const Nav = ({ className }) => {
         <NavItem link="/" content="Home" />
         <NavItem link="#about" content="About" />
         <NavItem link="#menu" content="Menu" />
-        <NavItem link="#reservations" content="Reservations" />
+        <NavItem link="/reservations" content="Reservations" />
         <NavItem link="#order-online" content="Order Online" />
         <NavItem link="#login" content="Login" />
       </ul>
