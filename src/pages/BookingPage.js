@@ -1,13 +1,16 @@
 import React from "react";
 import BookingForm from "../BookingForm";
+import Container from "../Container";
+import "./BookingPage.css";
 
-const BookingPage = ({ times, changeTimes }) => {
-  console.log(times, changeTimes);
+const BookingPage = () => {
   return (
-    <main>
-      <h1>Booking Page</h1>
-      <BookingForm></BookingForm>
-    </main>
+    <section className="reservations">
+      <Container className="container--reservations">
+        <h2 className="font-display-title">Reservations</h2>
+        <BookingForm></BookingForm>
+      </Container>
+    </section>
   );
 };
 

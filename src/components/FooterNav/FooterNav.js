@@ -1,5 +1,6 @@
 import React from "react";
 import "./FooterNav.css";
+import { Link } from "react-router-dom";
 
 const FooterNav = ({ data, className }) => {
   const { id, title, links } = data;
@@ -12,9 +13,9 @@ const FooterNav = ({ data, className }) => {
           if (link.href.length) {
             return (
               <li className="footer-nav__nav-item" key={key}>
-                <a href={link.href} className="footer-nav__link">
+                <Link to={link.href} className="footer-nav__link">
                   {link.text}
-                </a>
+                </Link>
               </li>
             );
           } else {

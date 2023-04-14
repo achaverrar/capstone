@@ -5,7 +5,7 @@ import "./AboutUs.css";
 
 const AboutUs = () => {
   return (
-    <section className="about-us">
+    <section id="about-us" className="about-us">
       <Container className="container--about-us">
         <h2 className="about-us__title font-display-title">About Us</h2>
         <section className="about-us__text font-paragraph-text">

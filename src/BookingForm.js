@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./BookingForm.css";
 
 const BookingForm = () => {
   const [availableTimes, setAvailableTimes] = useState([
@@ -25,47 +26,72 @@ const BookingForm = () => {
     e.preventDefault();
   };
   return (
-    <form
-      style={{ display: "grid", maxWidth: "200px", gap: "20px" }}
-      onSubmit={handleSubmit}
-    >
-      <label forhtml="date">Choose date</label>
+    <form onSubmit={handleSubmit} className="form">
+      <div className="form__group">
+        <label htmlFor="date" className="font-lead-text">
+          Choose date
+        </label>
+        <input
+          type="date"
+          id="date"
+          onChange={handleChange}
+          value={userInputs["date"]}
+          className="font-paragraph-text"
+        ></input>
+      </div>
+      <div className="form__group">
+        <label htmlFor="time" className="font-lead-text">
+          Choose time
+        </label>
+        <select
+          id="time"
+          onChange={handleChange}
+          value={userInputs["time"]}
+          className="font-paragraph-text"
+        >
+          {availableTimes.map((time) => (
+            <option key={time}>{time}</option>
+          ))}
+        </select>
+      </div>
+      <div className="form__group">
+        <label htmlFor="guests" className="font-lead-text">
+          Number of guests
+        </label>
+        <input
+          type="number"
+          placeholder="1"
+          min="1"
+          max="10"
+          id="guests"
+          onChange={handleChange}
+          value={userInputs["guests"]}
+          className="font-paragraph-text"
+        ></input>
+      </div>
+      <div className="form__group">
+        <label htmlFor="occasion" className="font-lead-text">
+          Occasion
+        </label>
+        <select
+          id="occasion"
+          onChange={handleChange}
+          value={userInputs["occasion"]}
+          className="font-paragraph-text"
+        >
+          <option>Select an occassion</option>
+          <option>Anniversary</option>
+          <option>Birthday</option>
+          <option>Business Meal</option>
+          <option>Date</option>
+          <option>Special Occassion</option>
+        </select>
+      </div>
       <input
-        type="date"
-        id="date"
-        onChange={handleChange}
-        value={userInputs["date"]}
+        type="submit"
+        value="Make Your reservation"
+        className="font-card-title form__button"
       ></input>
-      <label forhtml="time">Choose time</label>
-      <select id="time" onChange={handleChange} value={userInputs["time"]}>
-        {availableTimes.map((time) => (
-          <option key={time}>{time}</option>
-        ))}
-      </select>
-      <label forhtml="guests">Number of guests</label>
-      <input
-        type="number"
-        placeholder="1"
-        min="1"
-        max="10"
-        id="guests"
-        onChange={handleChange}
-        value={userInputs["guests"]}
-      ></input>
-      <label forhtml="occasion">Occasion</label>
-      <select
-        id="occasion"
-        onChange={handleChange}
-        value={userInputs["occasion"]}
-      >
-        <option>Select an occassion</option>
-        <option>Anniversary</option>
-        <option>Birthday</option>
-        <option>Business Meal</option>
-        <option>Date</option>
-        <option>Special Occassion</option>
-      </select>
-      <input type="submit" value="Make Your reservation"></input>
     </form>
   );
 };

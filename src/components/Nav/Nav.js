@@ -7,11 +7,11 @@ const Nav = ({ className }) => {
     <nav className={className}>
       <ul className="header__navbar-links">
         <NavItem link="/" content="Home" />
-        <NavItem link="#about" content="About" />
+        <NavItem link="#about-us" content="About" />
         <NavItem link="#menu" content="Menu" />
         <NavItem link="/reservations" content="Reservations" />
         <NavItem link="#order-online" content="Order Online" />
-        <NavItem link="#login" content="Login" />
+        <NavItem link="#" content="Login" />
       </ul>
     </nav>
   );
