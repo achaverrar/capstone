@@ -1,6 +1,7 @@
 import React from "react";
 import { restaurantFood } from "../../constants/images";
 import "./Hero.css";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -13,7 +14,7 @@ const Hero = () => {
           recipes served with a modern twist.
         </p>
         <button className="hero__info-cta font-card-title">
-          Reserve a Table
+          <Link to="/reservations">Reserve a Table</Link>
         </button>
       </article>
       <div className="hero__image-container">

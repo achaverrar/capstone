@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./FormInput.css";
 
-const FormInput = ({ data }) => {
+const FormInput = ({ data, value }) => {
   const {
     label,
     type,
@@ -28,15 +28,15 @@ const FormInput = ({ data }) => {
           id={id}
           {...inputProps}
           className="form__select font-paragraph-text"
-          defaultValue={options[0].value}
           onChange={handleChange}
+          value={value}
         >
-          {options.map(({ text, value }, index) => {
+          {options.map(({ text, optionValue }, index) => {
             return (
               <option
                 key={data.key + index}
                 className="form__option font-paragraph-text"
-                value={value}
+                value={optionValue}
               >
                 {text}
               </option>
@@ -52,6 +52,7 @@ const FormInput = ({ data }) => {
           onChange={handleChange}
           onBlur={handleFocus}
           focused={focused.toString()}
+          value={value}
         />
       )}
       <p className="form__error-message font-paragraph-text">{errorMessage}</p>

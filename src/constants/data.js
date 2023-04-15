@@ -144,6 +144,16 @@ const footerData = [
   },
 ];
 
+const initialState = {
+  name: "",
+  email: "",
+  date: "",
+  time: "17:00",
+  guests: 0,
+  occassion: "none",
+  submit: "",
+};
+
 const initialTimes = [
   {
     text: "17:00",
@@ -279,4 +289,11 @@ const formData = [
   },
 ];
 
-export { specialsData, testimonialsData, footerData, initialTimes, formData };
+export {
+  specialsData,
+  testimonialsData,
+  footerData,
+  initialState,
+  initialTimes,
+  formData,
+};

@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-import { formData } from "./constants/data";
+import { initialState, formData } from "./constants/data";
+import { validateInputs } from "./constants/dataValidator";
+import { useNavigate } from "react-router-dom";
 import "./BookingForm.css";
 import FormInput from "./FormInput";
 
 const BookingForm = ({ availableTimes, updateTimes }) => {
-  const [userInputs, setUserInputs] = useState({
-    date: "",
-    time: "",
-    guests: 1,
-    occassion: "none",
-    submit: "",
-  });
+  const [userInputs, setUserInputs] = useState(initialState);
+  const [submit, setSubmit] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     if (e.target.id === "date") {
@@ -21,28 +19,49 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const validInputs = validateInputs(userInputs);
+    if (validInputs) {
+      setUserInputs({ ...initialState });
+      setTimeout(() => {
+        setSubmit(false);
+        navigate("/");
+      }, 10000);
+    }
+    setSubmit(validInputs);
   };
+
   return (
-    <form onSubmit={handleSubmit} className="form">
-      {formData.map((data) => {
-        if (data.id === "time") {
-          console.log(data.id);
-          data.options = availableTimes;
-        }
-        return (
-          <FormInput
-            key={data.key}
-            data={{ ...data, handleChange }}
-            value={userInputs[data.id]}
-          />
-        );
-      })}
-      <input
-        type="submit"
-        value="Make Your reservation"
-        className="font-card-title form__button"
-      ></input>
-    </form>
+    <>
+      {submit && (
+        <div className="form__confirmation">
+          <h2 className="font-display-title">Thank you for choosing us!</h2>
+          <p className="font-lead-text">
+            Your table has been booked. We're looking forward to your visit!
+          </p>
+        </div>
+      )}
+      {!submit && (
+        <form onSubmit={handleSubmit} className="form">
+          {formData.map((data) => {
+            if (data.id === "time") {
+              data.options = availableTimes;
+            }
+            return (
+              <FormInput
+                key={data.key}
+                data={{ ...data, handleChange }}
+                value={userInputs[data.id]}
+              />
+            );
+          })}
+          <input
+            type="submit"
+            value="Make Your Reservation"
+            className="font-card-title form__button"
+          ></input>
+        </form>
+      )}
+    </>
   );
 };
 
