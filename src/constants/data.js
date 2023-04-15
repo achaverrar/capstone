@@ -144,42 +144,112 @@ const footerData = [
   },
 ];
 
-const inputs = [
+const formData = [
   {
     key: uuidv4(),
-    id: "date",
-    type: "date",
-    placeholder: "",
-    errorMessage: "",
-    pattern: "",
-    label: "Choose date",
+    label: "Full Name",
+    id: "name",
+    type: "text",
+    errorMessage: "Please, enter a valid name",
+    required: true,
+    pattern:
+      "(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})",
+  },
+  {
+    key: uuidv4(),
+    label: "Email Address",
+    id: "email",
+    type: "email",
+    errorMessage: "Enter a valid email address",
     required: true,
   },
   {
     key: uuidv4(),
-    id: "time",
-    type: "select",
-    placeholder: "",
-    label: "Choose time",
-    options: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"],
+    label: "Choose date",
+    id: "date",
+    type: "date",
+    errorMessage: "Choose a valid date",
+    required: true,
   },
   {
     key: uuidv4(),
+    label: "Choose time",
+    id: "time",
+    type: "select",
+    options: [
+      {
+        text: "17:00",
+        value: "17:00",
+      },
+      {
+        text: "18:00",
+        value: "18:00",
+      },
+      {
+        text: "19:00",
+        value: "19:00",
+      },
+      {
+        text: "20:00",
+        value: "20:00",
+      },
+      {
+        text: "21:00",
+        value: "21:00",
+      },
+      {
+        text: "22:00",
+        value: "22:00",
+      },
+    ],
+    errorMessage: "Choose a valid time",
+    required: true,
+  },
+  {
+    key: uuidv4(),
+    label: "Number of guests",
     id: "guests",
     type: "number",
+    errorMessage: "Choose a valid number",
+    required: true,
     placeholder: "1",
     min: "1",
     max: "10",
-    label: "Number of guests",
   },
   {
     key: uuidv4(),
+    label: "Occasion",
     id: "occasion",
     type: "select",
-    placeholder: "",
-    label: "Occasion",
-    options: ["Birthday", "Anniversary"],
+    options: [
+      {
+        text: "Select an occassion",
+        value: "none",
+      },
+      {
+        text: "Anniversary",
+        value: "anniversary",
+      },
+      {
+        text: "Birthday",
+        value: "birthday",
+      },
+      {
+        text: "Business Meal",
+        value: "business",
+      },
+      {
+        text: "Date",
+        value: "date",
+      },
+      {
+        text: "Special Occassion",
+        value: "special",
+      },
+    ],
+    errorMessage: "Choose a valid occasion",
+    required: false,
   },
 ];
 
-export { specialsData, testimonialsData, footerData };
+export { specialsData, testimonialsData, footerData, formData };
