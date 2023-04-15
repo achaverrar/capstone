@@ -31,10 +31,10 @@ const FormInput = ({ data }) => {
           defaultValue={options[0].value}
           onChange={handleChange}
         >
-          {options.map(({ text, value }) => {
+          {options.map(({ text, value }, index) => {
             return (
               <option
-                key={value}
+                key={data.key + index}
                 className="form__option font-paragraph-text"
                 value={value}
               >

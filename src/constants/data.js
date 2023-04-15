@@ -144,6 +144,33 @@ const footerData = [
   },
 ];
 
+const initialTimes = [
+  {
+    text: "17:00",
+    value: "17:00",
+  },
+  {
+    text: "18:00",
+    value: "18:00",
+  },
+  {
+    text: "19:00",
+    value: "19:00",
+  },
+  {
+    text: "20:00",
+    value: "20:00",
+  },
+  {
+    text: "21:00",
+    value: "21:00",
+  },
+  {
+    text: "22:00",
+    value: "22:00",
+  },
+];
+
 const formData = [
   {
     key: uuidv4(),
@@ -210,7 +237,7 @@ const formData = [
     label: "Number of guests",
     id: "guests",
     type: "number",
-    errorMessage: "Choose a valid number",
+    errorMessage: "Choose a number from 1 to 10",
     required: true,
     placeholder: "1",
     min: "1",
@@ -252,4 +279,4 @@ const formData = [
   },
 ];
 
-export { specialsData, testimonialsData, footerData, formData };
+export { specialsData, testimonialsData, footerData, initialTimes, formData };
