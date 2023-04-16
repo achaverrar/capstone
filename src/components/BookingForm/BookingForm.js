@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { initialState, formData } from "./constants/data";
-import { validateInputs } from "./constants/dataValidator";
+import { initialState, formData } from "../../constants/data";
+import { validateInputs } from "../../constants/dataValidator";
 import { useNavigate } from "react-router-dom";
+import FormInput from "../FormInput/FormInput";
 import "./BookingForm.css";
-import FormInput from "./FormInput";
 
 const BookingForm = ({ availableTimes, updateTimes }) => {
   const [userInputs, setUserInputs] = useState(initialState);
@@ -34,7 +34,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
     <>
       {submit && (
         <div className="form__confirmation">
-          <h2 className="font-display-title">Thank you for choosing us!</h2>
+          <h2 className="font-subtitle">Thank you for choosing us!</h2>
           <p className="font-lead-text">
             Your table has been booked. We're looking forward to your visit!
           </p>

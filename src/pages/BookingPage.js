@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BookingForm from "../BookingForm";
+import BookingForm from "../components/BookingForm/BookingForm";
 import Container from "../Container";
 import { initialTimes } from "../constants/data";
 import { fetchAPI } from "../api";
