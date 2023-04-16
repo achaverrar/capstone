@@ -1,6 +1,18 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { formData } from "../constants/data";
-import FormInput from "../FormInput";
+import FormInput from "../components/FormInput/FormInput";
+
+test("Renders label", () => {
+  render(
+    <>
+      <FormInput data={formData[3]} />
+      <FormInput data={formData[4]} />
+    </>
+  );
+
+  const guestsInput = screen.getByText("Number of guests");
+  expect(guestsInput).toBeInTheDocument();
+});
 
 test("Shows error message when entering an invalid number of guests", () => {
   render(
